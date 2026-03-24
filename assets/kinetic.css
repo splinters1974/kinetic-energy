@@ -103,6 +103,25 @@
   border-left: 4px solid #e74c3c;
 }
 
+/* ── Our Story – white text override ────────── */
+/* Squarespace set text to white for a dark background that doesn't render
+   outside Squarespace. Override to dark navy so it reads on any background. */
+.sqsrte-text-color--white {
+  color: #1c3461 !important;
+}
+
+/* Secondary button override – match site primary dark navy */
+.sqs-button-element--secondary {
+  color: #1c3461 !important;
+  border-color: #1c3461 !important;
+  background-color: transparent !important;
+}
+
+.sqs-button-element--secondary:hover {
+  background-color: #1c3461 !important;
+  color: #ffffff !important;
+}
+
 /* ── Navigation Fallback ────────────────────── */
 
 /* Ensure folder dropdown menus work without Squarespace JS */
