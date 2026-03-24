@@ -41,7 +41,6 @@
             btn.textContent = 'Send';
           }
         } else {
-          var json = await response.json();
           if (errorMsg) {
             errorMsg.style.display = 'block';
           }
@@ -57,7 +56,7 @@
           btn.textContent = 'Send';
         }
       }
-    });
+    }, true); // capture phase — fires before Squarespace bubble-phase handlers
   }
 
   function init() {
