@@ -3,6 +3,21 @@
    Netlify / Formspree migration overrides
    ============================================= */
 
+/* ── Hero video lightening overlay ─────────── */
+/* Adds a white semi-transparent overlay to lighten the homepage hero video
+   so the blue headline stands out, matching the original Squarespace appearance */
+[data-section-id="690e13bce53e3f43e17b8e3c"] .section-background {
+  position: relative;
+}
+[data-section-id="690e13bce53e3f43e17b8e3c"] .section-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* ── Formspree Contact Form ─────────────────── */
 .kinetic-formspree {
   width: 100%;
