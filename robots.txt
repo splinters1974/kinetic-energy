@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /cart
+Disallow: /_downloads
+Disallow: /privacy-policy-1
 
 Sitemap: https://www.kinetic-energy.co.uk/sitemap.xml
