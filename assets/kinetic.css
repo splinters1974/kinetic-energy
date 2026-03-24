@@ -4,18 +4,11 @@
    ============================================= */
 
 /* ── Hero video lightening overlay ─────────── */
-/* Adds a white semi-transparent overlay to lighten the homepage hero video
-   so the blue headline stands out, matching the original Squarespace appearance */
+/* Brightens the homepage hero video so the blue headline stands out */
+[data-section-id="690e13bce53e3f43e17b8e3c"] .sqs-video-background-native,
+[data-section-id="690e13bce53e3f43e17b8e3c"] .sqs-video-background-native__video-player,
 [data-section-id="690e13bce53e3f43e17b8e3c"] .section-background {
-  position: relative;
-}
-[data-section-id="690e13bce53e3f43e17b8e3c"] .section-background::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.55);
-  pointer-events: none;
-  z-index: 1;
+  filter: brightness(1.8);
 }
 
 /* ── Formspree Contact Form ─────────────────── */
