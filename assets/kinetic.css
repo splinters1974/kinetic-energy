@@ -177,6 +177,22 @@
   display: block;
 }
 
+/* ── Fix Squarespace lazy-loaded images ─────── */
+/* Without Squarespace JS, images with data-load="false" stay hidden */
+img[data-load="false"] {
+  opacity: 1 !important;
+}
+
+/* ── Fix Squarespace video player container ─── */
+.sqs-video-background-native__video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* ── SEO visually-hidden H1 ─────────────────── */
 /* H1 tags for SEO — hidden visually but readable by search engines */
 .seo-h1 {
