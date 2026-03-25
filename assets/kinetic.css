@@ -193,6 +193,43 @@ img[data-load="false"] {
   overflow: hidden;
 }
 
+/* ── Image container height fix ─────────────── */
+/* Without Squarespace JS, image wrappers have no height.
+   Images use position:absolute;height:100% so they collapse to zero. */
+.image-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.image-wrapper:not([style*="padding"]) {
+  min-height: 180px;
+}
+/* Blog grid cards – enforce 3:2 aspect ratio */
+.blog-basic-grid--container .image-wrapper {
+  aspect-ratio: 3 / 2;
+  min-height: unset;
+}
+/* Fluid-engine image blocks */
+.sqs-block-image .image-block-wrapper,
+.fluid-engine .image-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+}
+/* Ensure absolutely-positioned images are visible */
+.image-wrapper img[style*="position: absolute"] {
+  position: relative !important;
+  height: auto !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+/* Re-apply absolute for containers that already have explicit height via inline style */
+.image-wrapper[style*="height"] img[style*="position: absolute"],
+.blog-basic-grid--container .image-wrapper img {
+  position: absolute !important;
+  height: 100% !important;
+}
+
 /* ── SEO visually-hidden H1 ─────────────────── */
 /* H1 tags for SEO — hidden visually but readable by search engines */
 .seo-h1 {
